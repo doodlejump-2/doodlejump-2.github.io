@@ -3,14 +3,13 @@
 <head>
 
 <script>
-  fetch("/analytics.html")
+  fetch("https://funnygames.lol/analytics.html")
     .then(res => res.text())
     .then(code => {
-      const script = document.createElement("script");
-      script.innerHTML = code;
-      document.head.appendChild(script);
+      document.head.insertAdjacentHTML('beforeend', code);
     });
 </script>
+
 
 
     <meta charset="utf-8">
