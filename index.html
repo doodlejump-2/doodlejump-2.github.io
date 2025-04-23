@@ -310,17 +310,19 @@
 
   <!-- Dynamic Footer & Logo Update -->
   <script>
-    // Update logo text
-    const logoText = document.getElementById("logo-text");
-    if (logoText) logoText.textContent = siteConfig.siteName;
+  // Update logo text
+  const logoText = document.getElementById("logo-text");
+  if (logoText) logoText.textContent = siteConfig.siteName;
 
-    // Update footer text
-    const year = new Date().getFullYear();
-    const footerText = document.getElementById("footer-text");
-    if (footerText) {
-      footerText.innerHTML = `Copyright © ${year} <a href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
-    }
-  </script>
+  // Update footer text with red color link
+  const year = new Date().getFullYear();
+  const footerText = document.getElementById("footer-text");
+  if (footerText) {
+    footerText.innerHTML = `Copyright © ${year} 
+      <a href="${siteConfig.siteURL}" target="_blank" style="color: red;">${siteConfig.siteName}</a>. All rights reserved.`;
+  }
+</script>
+
 
 </body>
 </html>
