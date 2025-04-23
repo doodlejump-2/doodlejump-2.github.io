@@ -6,7 +6,9 @@
   fetch("/analytics.html")
     .then(res => res.text())
     .then(code => {
-      document.head.insertAdjacentHTML('beforeend', code);
+      const script = document.createElement("script");
+      script.innerHTML = code;
+      document.head.appendChild(script);
     });
 </script>
 
