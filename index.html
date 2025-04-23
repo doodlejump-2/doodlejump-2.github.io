@@ -314,14 +314,17 @@
   const logoText = document.getElementById("logo-text");
   if (logoText) logoText.textContent = siteConfig.siteName;
 
-  // Update footer text with red color link
+  // Update footer text with dynamic color
   const year = new Date().getFullYear();
   const footerText = document.getElementById("footer-text");
   if (footerText) {
     footerText.innerHTML = `Copyright © ${year} 
-      <a href="${siteConfig.siteURL}" target="_blank" style="color: red;">${siteConfig.siteName}</a>. All rights reserved.`;
+      <a href="${siteConfig.siteURL}" target="_blank" style="color: ${siteConfig.footerColor};">
+        ${siteConfig.siteName}
+      </a>. All rights reserved.`;
   }
 </script>
+
 
 
 </body>
