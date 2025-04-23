@@ -42,6 +42,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+	 <!-- Config -->
+  <script src="config.js"></script>
 </head>
 
 <body><!--MENU-->
@@ -296,31 +298,29 @@
     </div>
 
 </div>
-	<script src="config.js"></script>
-<script>
-  // Update logo text
-  const logoText = document.getElementById("logo-text");
-  if (logoText) logoText.textContent = siteConfig.siteName;
+	 <footer class="footer">
+    <center>
+      <p id="footer-text"></p>
+    </center>
+  </footer>
 
-  // Update footer text
-  const year = new Date().getFullYear();
-  const footerText = document.getElementById("footer-text");
-  if (footerText) {
-    footerText.innerHTML = `Copyright © ${year} <a href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
-  }
-</script>
+  <!-- Footer Scripts -->
+  <script src="rs/js/jquery-3.4.1.min.js"></script>
+  <script src="rs/js/footer.js"></script>
 
+  <!-- Dynamic Footer & Logo Update -->
+  <script>
+    // Update logo text
+    const logoText = document.getElementById("logo-text");
+    if (logoText) logoText.textContent = siteConfig.siteName;
 
+    // Update footer text
+    const year = new Date().getFullYear();
+    const footerText = document.getElementById("footer-text");
+    if (footerText) {
+      footerText.innerHTML = `Copyright © ${year} <a href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
+    }
+  </script>
 
-
-
-<!--END GAME PLAY--><footer>
-    <script src="rs/js/jquery-3.4.1.min.js"></script>
-    <script src="rs/js/footer.js"></script>
-	<footer class="footer">
-  <center>
-    <p id="footer-text"></p>
-  </center>
-</footer>
 </body>
 </html>
