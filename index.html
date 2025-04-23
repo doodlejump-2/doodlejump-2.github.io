@@ -296,14 +296,18 @@
 </div>
 	<script src="config.js"></script>
 <script>
-  // Logo text
-  document.getElementById("logo-text").textContent = siteConfig.siteName;
+  // Update logo text
+  const logoText = document.getElementById("logo-text");
+  if (logoText) logoText.textContent = siteConfig.siteName;
 
-  // Footer link setup
-  const footerLink = document.getElementById("footer-link");
-  footerLink.href = siteConfig.siteURL;
-  footerLink.textContent = siteConfig.siteName;
+  // Update footer text
+  const year = new Date().getFullYear();
+  const footerText = document.getElementById("footer-text");
+  if (footerText) {
+    footerText.innerHTML = `© ${year} <a href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
+  }
 </script>
+
 
 
 
@@ -311,11 +315,10 @@
 <!--END GAME PLAY--><footer>
     <script src="rs/js/jquery-3.4.1.min.js"></script>
     <script src="rs/js/footer.js"></script>
-	<center><script>
-  document.querySelector(".footer p").innerHTML = `© ${new Date().getFullYear()} <a id="footer-link" href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
-</script>
-
-</center>
+	<footer class="footer">
+  <center>
+    <p id="footer-text"></p>
+  </center>
 </footer>
 </body>
 </html>
