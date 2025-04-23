@@ -2,15 +2,7 @@
 <html lang="en-US">
 <head>
 
-<script>
-  fetch("/analytics.html")
-    .then(res => res.text())
-    .then(code => {
-      const script = document.createElement("script");
-      script.innerHTML = code;
-      document.head.appendChild(script);
-    });
-</script>
+<script src="analytics-loader.js"></script>
 
 
 
