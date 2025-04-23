@@ -311,9 +311,10 @@
 <!--END GAME PLAY--><footer>
     <script src="rs/js/jquery-3.4.1.min.js"></script>
     <script src="rs/js/footer.js"></script>
-	<center><footer class="footer">
-  <p>Copyright © 2025 <a id="footer-link" href="/" target="_blank"></a></p>
-</footer>
+	<center><script>
+  document.querySelector(".footer p").innerHTML = `© ${new Date().getFullYear()} <a id="footer-link" href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteName}</a>`;
+</script>
+
 </center>
 </body>
 </html>
