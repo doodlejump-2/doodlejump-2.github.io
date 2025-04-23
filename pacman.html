@@ -3,12 +3,26 @@
 <head>
 	
 <script>
-  fetch("/analytics.html")
+  fetch("analytics.html")
     .then(res => res.text())
-    .then(code => {
-      document.head.insertAdjacentHTML('beforeend', code);
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject each script manually so browser executes them
+      temp.querySelectorAll("script").forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+          newScript.async = oldScript.async;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.head.appendChild(newScript);
+      });
     });
 </script>
+
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
