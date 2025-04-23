@@ -296,25 +296,24 @@
 </div>
 	<script src="config.js"></script>
 <script>
-  // Update logo text
+  // Logo text
   document.getElementById("logo-text").textContent = siteConfig.siteName;
 
-  // Update footer URL
-  const footerUrl = document.getElementById("footer-url");
-  footerUrl.href = siteConfig.siteURL;
-  footerUrl.textContent = siteConfig.siteURL;
+  // Footer link setup
+  const footerLink = document.getElementById("footer-link");
+  footerLink.href = siteConfig.siteURL;
+  footerLink.textContent = siteConfig.siteName;
 </script>
+
 
 
 
 <!--END GAME PLAY--><footer>
     <script src="rs/js/jquery-3.4.1.min.js"></script>
     <script src="rs/js/footer.js"></script>
-	<footer class="footer">
-  <p>
-   Copyright © 2025 <a id="footer-url" href="/" target="_blank"></a>
-  </p>
-
+	<center><footer class="footer">
+  <p>Copyright © 2025 <a id="footer-link" href="/" target="_blank"></a></p>
 </footer>
+</center>
 </body>
 </html>
