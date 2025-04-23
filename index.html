@@ -3,7 +3,7 @@
 <head>
 
 <script>
-  fetch("https://funnygames.lol/analytics.html")
+  fetch("/analytics.html")
     .then(res => res.text())
     .then(code => {
       document.head.insertAdjacentHTML('beforeend', code);
