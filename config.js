@@ -1,4 +1,4 @@
 const siteConfig = {
-  siteName: "Doodle Jump 2",
+  siteName: "Doodle Jump",
   siteURL: "https://doodlejump-2.github.io"
 };
