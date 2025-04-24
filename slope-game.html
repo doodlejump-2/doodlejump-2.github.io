@@ -40,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+	<script src="config.js"></script>
 </head>
 
 <body><!--MENU-->
@@ -247,9 +248,44 @@
 
 </div>
 
-<!--END GAME PLAY--><footer>
-    <script src="rs/js/jquery-3.4.1.min.js"></script>
-    <script src="rs/js/footer.js"></script>
-</footer>
+<div class="footer-links" style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
+  <a href="/privacy-policy.html" style="margin: 0 10px; color: #FFD700;">Privacy Policy</a> |
+  <a href="/terms-and-conditions.html" style="margin: 0 10px; color: #FFD700;">Terms & Conditions</a> |
+  <a href="/cookies.html" style="margin: 0 10px; color: #FFD700;">Cookies</a> |
+  <a href="/dmca.html" style="margin: 0 10px; color: #FFD700;">DMCA</a> |
+  <a href="/about-us.html" style="margin: 0 10px; color: #FFD700;">About Us</a> |
+  <a href="/contact-us.html" style="margin: 0 10px; color: #FFD700;">Contact Us</a>
+</div>
+
+<br>
+	 <footer class="footer">
+    <center>
+      <p id="footer-text"></p>
+    </center>
+  </footer>
+
+  <!-- Footer Scripts -->
+  <script src="rs/js/jquery-3.4.1.min.js"></script>
+  <script src="rs/js/footer.js"></script>
+
+  <!-- Dynamic Footer & Logo Update -->
+  <script>
+  // Update logo text
+  const logoText = document.getElementById("logo-text");
+  if (logoText) logoText.textContent = siteConfig.siteName;
+
+  // Update footer text with dynamic color
+  const year = new Date().getFullYear();
+  const footerText = document.getElementById("footer-text");
+  if (footerText) {
+    footerText.innerHTML = `Copyright © ${year} 
+      <a href="${siteConfig.siteURL}" target="_blank" style="color: ${siteConfig.footerColor};">
+        ${siteConfig.siteName}
+      </a>. All rights reserved.`;
+  }
+</script>
+
+
+
 </body>
 </html>
