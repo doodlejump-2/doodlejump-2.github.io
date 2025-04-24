@@ -60,12 +60,21 @@
 </nav>
 
 <script>
+  // Desktop Menu Load
   fetch("/more.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("dynamic-menu").innerHTML = data;
     });
+
+  // Mobile Menu Load
+  fetch("/more.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("mobile-dynamic-menu").innerHTML = data;
+    });
 </script>
+
 
                 <div class="center-box merge_icon icon-menu-mobile">
                     <svg fill="#555" height="24" viewBox="0 -21 384 384" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -84,23 +93,13 @@
 <!--END MENU-->
 <!--Mobil MENU-->
 <div class="mobile-dropdown" id="mobile-dropdown">
-    <div class="row">
-        <nav class="nav-mobile-controler">
-            <ul>
-                                    <li>
-                        <a class="menu-link-mobile" href="/doodle-jump-2">
-                            <span class="text-menu-link">Doodle Jump 2</span>
-                        </a>
-                    </li>
-                                    <li>
-                        <a class="menu-link-mobile" href="https://funnygames.lol/">
-                            <span class="text-menu-link">More Games</span>
-                        </a>
-                    </li>
-                            </ul>
-        </nav>
-    </div>
+  <div class="row">
+    <nav class="nav-mobile-controler">
+      <ul id="mobile-dynamic-menu"></ul>
+    </nav>
+  </div>
 </div>
+
 	<center>
   <br>
   <div id="ad-container"></div>
