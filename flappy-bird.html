@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	
+	<script src="/path-to/config.js"></script>
+<script>
+  // Get current title
+  const pageTitle = document.title;
+
+  // Append site name
+  document.title = `${pageTitle} - ${siteConfig.siteName}`;
+</script>
+
 <script>
   fetch("analytics.html")
     .then(res => res.text())
