@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	
+<script>
+  fetch("analytics.html")
+    .then(res => res.text())
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject each script manually so browser executes them
+      temp.querySelectorAll("script").forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+          newScript.async = oldScript.async;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.head.appendChild(newScript);
+      });
+    });
+</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="content-language" content="en">
+    <meta name="external" content="true">
+    <meta name="distribution" content="Global">
+    <meta http-equiv="audience" content="General">
+    <link rel="icon" href="rs/imgs/favicon.jpg">
+    <title>Privacy Policy/title>
+    <meta name="keywords" content="geometry dash">
+    <meta name="news_keywords" content="geometry dash">
+    <meta name="description" content="Geometry Dash - Doodle Jump">
+    <link rel="stylesheet" type="text/css" href="rs/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+	<script src="config.js"></script>
+</head>
+
+<body><!--MENU-->
+<header id="header">
+    <div class="container">
+  <div class="row">
+    <div class="p-r d-flex sp al header-bar">
+      <div class="bar-logo">
+        <a class="logo-text" id="logo-text" href="/"></a> 
+      </div>
+                <nav class="navigation">
+  <ul id="dynamic-menu"></ul>
+</nav>
+
+<script>
+  // Desktop Menu Load
+  fetch("/more.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("dynamic-menu").innerHTML = data;
+    });
+
+  // Mobile Menu Load
+  fetch("/more.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("mobile-dynamic-menu").innerHTML = data;
+    });
+</script>
+
+                <div class="center-box merge_icon icon-menu-mobile">
+                    <svg fill="#555" height="24" viewBox="0 -21 384 384" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m362.667969 0h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                        <path d="m362.667969 128h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                        <path d="m362.667969 256h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--END MENU-->
+<!--Mobil MENU-->
+<div class="mobile-dropdown" id="mobile-dropdown">
+  <div class="row">
+    <nav class="nav-mobile-controler">
+      <ul id="mobile-dynamic-menu"></ul>
+    </nav>
+  </div>
+</div>
+<!--END Mobile menu--><!--GAME PLAY-->
+
+                        <div class="text-area--content">
+<h2>About Geometry Dash</h2>
+  <p><strong>Geometry Dash</strong> is a fast-paced rhythm-based platformer game that challenges players with obstacle-filled levels, sharp reflexes, and energetic music. With a geometric cube as your character, your goal is to jump, fly, and flip your way through danger!</p>
+
+  <h2>How to Play Geometry Dash</h2>
+
+  <h3>Jump and Dodge Obstacles</h3>
+  <p>Tap to jump or hold to keep jumping continuously. Timing is everything — hit a spike or crash into an obstacle and you’ll have to restart the level. You must sync your moves with the background music to succeed.</p>
+
+  <h3>Master Different Modes</h3>
+  <p>Besides jumping, some levels transform your cube into a spaceship or other forms. You'll fly, fall, and flip through gravity-defying challenges. Each mode requires a new skill set!</p>
+
+  <h2>Game Controls</h2>
+  <p><strong>Mobile:</strong> Tap the screen to jump.</p>
+  <p><strong>Desktop:</strong> Press the spacebar, up arrow, or click your mouse to jump or interact.</p>
+
+  <h2>Tips to Improve</h2>
+  <ul>
+    <li>Practice mode is your best friend – use it to master difficult levels.</li>
+    <li>Memorize the level layout to improve timing and rhythm.</li>
+    <li>Stay calm – Geometry Dash is intense but requires patience.</li>
+    <li>Play with headphones – syncing with the music helps a lot!</li>
+  </ul>
+
+  <h2>Game Features</h2>
+  <ul>
+    <li>Fast-paced rhythm-based platform gameplay</li>
+    <li>Multiple challenging levels and game modes</li>
+    <li>Custom level editor for creative minds</li>
+    <li>Catchy background music synced with gameplay</li>
+    <li>Unlockable icons and colors to customize your character</li>
+  </ul>
+
+  <h2>FAQs</h2>
+
+  <p><strong>Is Geometry Dash free to play?</strong></p>
+  <p>Yes! Many online versions are free to play in your browser, although the official app versions may require a purchase.</p>
+
+  <p><strong>Can I create my own levels?</strong></p>
+  <p>Yes, Geometry Dash includes a level editor where you can build and share your own levels with the community.</p>
+
+  <p><strong>Is Geometry Dash hard?</strong></p>
+  <p>Yes! It’s known for its difficulty and requires sharp reflexes, memorization, and rhythmic timing. But that’s what makes it so fun and addictive!</p>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-links" style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
+  <a href="/privacy-policy.html" style="margin: 0 10px; color: #FFD700;">Privacy Policy</a> |
+  <a href="/terms-and-conditions.html" style="margin: 0 10px; color: #FFD700;">Terms & Conditions</a> |
+  <a href="/cookies.html" style="margin: 0 10px; color: #FFD700;">Cookies</a> |
+  <a href="/dmca.html" style="margin: 0 10px; color: #FFD700;">DMCA</a> |
+  <a href="/about-us.html" style="margin: 0 10px; color: #FFD700;">About Us</a> |
+  <a href="/contact-us.html" style="margin: 0 10px; color: #FFD700;">Contact Us</a>
+</div>
+
+<br>
+	 <footer class="footer">
+    <center>
+      <p id="footer-text"></p>
+    </center>
+  </footer>
+
+  <!-- Footer Scripts -->
+  <script src="rs/js/jquery-3.4.1.min.js"></script>
+  <script src="rs/js/footer.js"></script>
+
+  <!-- Dynamic Footer & Logo Update -->
+  <script>
+  // Update logo text
+  const logoText = document.getElementById("logo-text");
+  if (logoText) logoText.textContent = siteConfig.siteName;
+
+  // Update footer text with dynamic color
+  const year = new Date().getFullYear();
+  const footerText = document.getElementById("footer-text");
+  if (footerText) {
+    footerText.innerHTML = `Copyright © ${year} 
+      <a href="${siteConfig.siteURL}" target="_blank" style="color: ${siteConfig.footerColor};">
+        ${siteConfig.siteName}
+      </a>. All rights reserved.`;
+  }
+</script>
+
+
+
+</body>
+</html>
