@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	
+<script>
+  fetch("analytics.html")
+    .then(res => res.text())
+    .then(html => {
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Inject each script manually so browser executes them
+      temp.querySelectorAll("script").forEach(oldScript => {
+        const newScript = document.createElement("script");
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+          newScript.async = oldScript.async;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.head.appendChild(newScript);
+      });
+    });
+</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="content-language" content="en">
+    <meta name="external" content="true">
+    <meta name="distribution" content="Global">
+    <meta http-equiv="audience" content="General">
+    <link rel="icon" href="rs/imgs/favicon.jpg">
+    <title>Terms And Conditions</title>
+    <meta name="keywords" content="geometry dash">
+    <meta name="news_keywords" content="geometry dash">
+    <meta name="description" content="Geometry Dash - Doodle Jump">
+    <link rel="stylesheet" type="text/css" href="rs/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+	<script src="config.js"></script>
+	  <script src="config.js"></script> <!-- Link your config.js -->
+</head>
+
+<body><!--MENU-->
+<header id="header">
+    <div class="container">
+  <div class="row">
+    <div class="p-r d-flex sp al header-bar">
+      <div class="bar-logo">
+        <a class="logo-text" id="logo-text" href="/"></a> 
+      </div>
+                <nav class="navigation">
+  <ul id="dynamic-menu"></ul>
+</nav>
+
+<script>
+  // Desktop Menu Load
+  fetch("/more.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("dynamic-menu").innerHTML = data;
+    });
+
+  // Mobile Menu Load
+  fetch("/more.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("mobile-dynamic-menu").innerHTML = data;
+    });
+</script>
+
+                <div class="center-box merge_icon icon-menu-mobile">
+                    <svg fill="#555" height="24" viewBox="0 -21 384 384" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m362.667969 0h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                        <path d="m362.667969 128h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                        <path d="m362.667969 256h-341.335938c-11.753906 0-21.332031 9.578125-21.332031 21.332031v42.667969c0 11.753906 9.578125 21.332031 21.332031 21.332031h341.335938c11.753906 0 21.332031-9.578125 21.332031-21.332031v-42.667969c0-11.753906-9.578125-21.332031-21.332031-21.332031zm0 0">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--END MENU-->
+<!--Mobil MENU-->
+<div class="mobile-dropdown" id="mobile-dropdown">
+  <div class="row">
+    <nav class="nav-mobile-controler">
+      <ul id="mobile-dynamic-menu"></ul>
+    </nav>
+  </div>
+</div>
+<!--END Mobile menu--><!--GAME PLAY-->
+<center>
+                        <div class="text-area--content">
+
+ <p>Welcome to <span id="site-name">[Your Site Name]</span>! By accessing and using this website, you agree to comply with the following terms and conditions. Please read them carefully before using our site. You can access our site at <span id="site-url">[Site URL]</span>.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+<p>By accessing or using this website and any of its services, you agree to comply with and be bound by these <strong>Terms and Conditions</strong>. If you do not agree with any part of these terms, you should immediately stop using or accessing this website.</p>
+
+<p>These terms apply to all users, including but not limited to browsers, vendors, customers, merchants, and content providers. Your continued use of the website constitutes your acceptance of these Terms and any changes made to them.</p>
+
+<p>We reserve the right to modify, update, or replace any part of these Terms and Conditions at any time. Any changes will be posted here, and your continued use of the site after such modifications will be considered your acceptance of those changes.</p>
+
+<p>By using this website, you also agree to comply with our <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and other applicable policies. These documents, together with these Terms and Conditions, govern your access to and use of the site.</p>
+
+<p>If you do not agree with these terms, please refrain from using this website and its services. Your use of the website signifies your agreement to these terms, which form a legally binding agreement between you and <span id="site-name"></span>.</p>
+
+<script>
+  // Dynamically add the site name from config.js or a global variable
+  const siteName = 'Your Site Name'; // Replace this with siteConfig.siteName if you are using a config.js file
+  document.getElementById('site-name').textContent = siteName;
+</script>
+
+    <h2>2. Changes to the Terms</h2>
+    <p>We reserve the right to modify, amend, or update these terms at any time without prior notice. All changes will be posted on this page, and your continued use of the website after such changes will be deemed your acceptance of those changes.</p>
+
+    <h2>3. Use of the Website</h2>
+    <p>You agree to use this website only for lawful purposes and in a way that does not infringe the rights of others or restrict or inhibit their use and enjoyment of the site. You may not use the website to:</p>
+    <ul>
+      <li>Engage in any unlawful, fraudulent, or harmful activity.</li>
+      <li>Interfere with or disrupt the functioning of the website or its servers.</li>
+      <li>Access any content or data without authorization.</li>
+    </ul>
+
+    <h2>4. Intellectual Property Rights</h2>
+    <p>All content and materials on the website, including but not limited to text, graphics, logos, images, and software, are the property of [Your Site Name] or its content providers and are protected by copyright and intellectual property laws. Unauthorized use of these materials is strictly prohibited.</p>
+
+    <h2>5. User Accounts</h2>
+    <p>If you create an account on our website, you are responsible for maintaining the confidentiality of your account information and password. You agree to notify us immediately if you become aware of any unauthorized use of your account.</p>
+
+    <h2>6. Privacy and Data Protection</h2>
+    <p>Your privacy is important to us. Please review our <a href="/privacy-policy.html">Privacy Policy</a> to understand how we collect, use, and protect your personal data.</p>
+
+    <h2>7. Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites. We are not responsible for the content, privacy practices, or terms of service of these third-party sites. Please review their terms and privacy policies before interacting with them.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>[Your Site Name] will not be liable for any direct, indirect, incidental, special, or consequential damages arising from your use of the website, including but not limited to errors, viruses, or any issues that result in data loss or damages to your devices.</p>
+
+    <h2>9. Governing Law</h2>
+    <p>These Terms and Conditions are governed by the laws of [Your Country/Region]. Any disputes arising from these terms will be resolved in the courts of [Your Jurisdiction].</p>
+
+    <h2>10. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the website at our sole discretion if we believe you have violated any of these terms.</p>
+
+    <h2>11. Contact Information</h2>
+    <p>If you have any questions or concerns about these Terms and Conditions, please contact us at:<br>
+    Email: [Your Contact Email]<br>
+    Phone: [Your Contact Number]</p>
+
+    <p>Last updated: [Date]</p>
+</div>
+
+<script>
+// Fill Site Name and URL dynamically
+document.getElementById("site-name-pp").innerText = siteConfig.siteName;
+document.getElementById("site-url-pp").innerHTML = `<a href="${siteConfig.siteURL}" target="_blank">${siteConfig.siteURL}</a>`;
+document.getElementById("site-name-pp2").innerText = siteConfig.siteName;
+document.getElementById("site-name-pp3").innerText = siteConfig.siteName;
+document.getElementById("site-name-pp4").innerText = siteConfig.siteName;
+
+document.getElementById("site-url-contact1").href = siteConfig.siteURL + "/contact-us.html";
+document.getElementById("site-url-contact2").href = siteConfig.siteURL + "/contact-us.html";
+document.getElementById("site-url-contact3").href = siteConfig.siteURL + "/contact-us.html";
+</script>
+</div>
+				</center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-links" style="text-align: center; margin-top: 30px; margin-bottom: 10px;">
+  <a href="/privacy-policy.html" style="margin: 0 10px; color: #FFD700;">Privacy Policy</a> |
+  <a href="/terms-and-conditions.html" style="margin: 0 10px; color: #FFD700;">Terms & Conditions</a> |
+  <a href="/cookies.html" style="margin: 0 10px; color: #FFD700;">Cookies</a> |
+  <a href="/dmca.html" style="margin: 0 10px; color: #FFD700;">DMCA</a> |
+  <a href="/about-us.html" style="margin: 0 10px; color: #FFD700;">About Us</a> |
+  <a href="/contact-us.html" style="margin: 0 10px; color: #FFD700;">Contact Us</a>
+</div>
+
+<br>
+	 <footer class="footer">
+    <center>
+      <p id="footer-text"></p>
+    </center>
+  </footer>
+
+  <!-- Footer Scripts -->
+  <script src="rs/js/jquery-3.4.1.min.js"></script>
+  <script src="rs/js/footer.js"></script>
+
+  <!-- Dynamic Footer & Logo Update -->
+  <script>
+  // Update logo text
+  const logoText = document.getElementById("logo-text");
+  if (logoText) logoText.textContent = siteConfig.siteName;
+
+  // Update footer text with dynamic color
+  const year = new Date().getFullYear();
+  const footerText = document.getElementById("footer-text");
+  if (footerText) {
+    footerText.innerHTML = `Copyright © ${year} 
+      <a href="${siteConfig.siteURL}" target="_blank" style="color: ${siteConfig.footerColor};">
+        ${siteConfig.siteName}
+      </a>. All rights reserved.`;
+  }
+</script>
+
+
+
+</body>
+</html>
